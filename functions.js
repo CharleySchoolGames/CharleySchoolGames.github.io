@@ -1,4 +1,15 @@
 highScore = 0
+let interval = 100
+let myinterval
+function updateDifficulty(){
+    clearInterval(myinterval)
+    initSnake()
+    makeBoard()
+    interval = (1000 / document.querySelector('#difficulty').value)
+    myinterval = setInterval(function(){
+        moveSnake()
+    }, interval)
+}
 function createBoard(side)
 {
     var table = document.createElement('table')

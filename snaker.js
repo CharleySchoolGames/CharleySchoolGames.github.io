@@ -69,7 +69,6 @@ function clearSnake(){
     }
 }
 document.addEventListener('keydown', function(event) {
-    console.log(event.keyCode)
     if((event.keyCode === 87 || event.keyCode === 38) && snake.lastmove !== "S"){ //w
         snake.facing = "N"
     }else if((event.keyCode === 65 || event.keyCode === 37) && snake.lastmove !== "E"){  //a
@@ -107,6 +106,3 @@ function detectDeath(){
 initSnake()
 makeApple()
 makeBoard()
-let myinterval = setInterval(function(){
-    moveSnake()
-}, 100)

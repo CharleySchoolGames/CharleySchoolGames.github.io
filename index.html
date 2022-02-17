@@ -21,5 +21,14 @@
         <script src="index.js"></script>
         <script src="snaker.js"></script>
     </div>
+    <div style="position:fixed;right:10px;top:50px">
+        <labe style="color:white">Difficulty (Tiles per second)</label>
+        <input id="difficulty" type="number" value="10" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"/>
+        <br>
+        <button id="updatebutton" onclick="updateDifficulty()"><b>Update difficulty</b></button>
+    </div>
+    <script>
+        updateDifficulty()
+    </script>
 </body>
 </html>
