@@ -1,0 +1,28 @@
+.Cell {
+    background-color:rgb(9, 255, 0);
+    height:30px;
+    width:30px;
+}
+.emptyCell{
+    background-color:white;
+    height:30px;
+    width:30px;
+}
+.bigDiv{
+    position:fixed;
+    left:50%
+}
+.appleCell{
+    background-color:red;
+    height:30px;    
+    width:30px;
+}
+.body{
+    background-color:rgb(78, 78, 78);
+}
+.scoreBoard{
+    color: white;
+    float: top;
+    font-size: 30px;
+    width: 25%;
+}
