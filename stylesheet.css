@@ -1,21 +1,17 @@
 .Cell {
     background-color:rgb(9, 255, 0);
-    height:30px;
-    width:30px;
 }
 .emptyCell{
     background-color:white;
-    height:30px;
-    width:30px;
 }
 .bigDiv{
     position:fixed;
-    left:50%
+    left: 24%;
+    height: 97%;
+    width: 50%;
 }
 .appleCell{
     background-color:red;
-    height:30px;    
-    width:30px;
 }
 .body{
     background-color:rgb(78, 78, 78);
@@ -25,4 +21,8 @@
     float: top;
     font-size: 30px;
     width: 25%;
+}
+.tableClass{
+    width: 100%;
+    height: 100%;
 }

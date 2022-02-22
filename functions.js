@@ -13,6 +13,7 @@ function updateDifficulty(){
 function createBoard(side)
 {
     var table = document.createElement('table')
+    table.className = "tableClass"
     for(i=0; i<side; i++)
     {
         var row = document.createElement('tr')
@@ -26,6 +27,7 @@ function createBoard(side)
         }
         table.appendChild(row)
     }
+    table.id = "gameBoard"
     return table
 }
 function scoreChanger(){
@@ -34,4 +36,14 @@ function scoreChanger(){
         highScore = score
         document.querySelector('#high').innerHTML = highScore
     }
+}
+function redoBoard(num){
+    boardSize = num
+    var tmp = document.querySelector('#gameBoard')
+    tmp.remove()
+    tmpdiv = document.querySelector('#bigDiv')
+    board = tmpdiv.appendChild(createBoard(num))
+    initSnake()
+    makeApple()
+    makeBoard()
 }

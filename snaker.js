@@ -2,15 +2,15 @@ let snake = {}
 let apple = {}
 let score = 0
 function randInt(){
-    return Math.floor(Math.random() * 16)
+    return Math.floor(Math.random() * boardSize)
 }
 function initSnake(){
     snake = {
-        facing: "N",
+        facing: "E",
         parts: [
-            [8,9],
-            [8,8],
-            [8,7]
+            [0,0],
+            [0,0],
+            [0,0]
         ],
         lastmove: ''
     }
@@ -61,8 +61,8 @@ function makeBoard(){
 }
 
 function clearSnake(){
-    for(y=0; y<16; y++){
-        for(x=0; x<16; x++){
+    for(y=0; y<boardSize; y++){
+        for(x=0; x<boardSize; x++){
             part = document.querySelector(`#row${y} #cell${x}`)
             part.className = "emptyCell"
         }
@@ -91,7 +91,7 @@ function detectApple(){
     return false
 }
 function detectDeath(){
-    if((snake.parts[0][0] < 0 || snake.parts[0][1] < 0) || (snake.parts[0][0] > 15 || snake.parts[0][1] > 15)){
+    if((snake.parts[0][0] < 0 || snake.parts[0][1] < 0) || (snake.parts[0][0] > boardSize-1 || snake.parts[0][1] > boardSize-1)){
         initSnake()
         return true
     }

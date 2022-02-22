@@ -1,2 +1,3 @@
-board = document.body.appendChild(createBoard(16))
-board.id = "gameBoard"
+boardSize = 16
+tmpdiv = document.querySelector('#bigDiv')
+board = tmpdiv.appendChild(createBoard(boardSize))

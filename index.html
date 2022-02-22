@@ -16,17 +16,23 @@
         <label class="scoreBoard">Current score:</label>
         <label id="curr" class="scoreBoard">~</label>
     </div>
-    <div class="bigDiv">
-        <script src="functions.js"></script>
-        <script src="index.js"></script>
-        <script src="snaker.js"></script>
+    <div class="bigDiv" id="bigDiv">
     </div>
     <div style="position:fixed;right:10px;top:50px">
-        <labe style="color:white">Difficulty (Tiles per second)</label>
+        <labe style="color:white">Difficulty (Tiles per second) </label>
         <input id="difficulty" type="number" value="10" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"/>
         <br>
         <button id="updatebutton" onclick="updateDifficulty()"><b>Update difficulty</b></button>
+        <br>
+        <br>
+        <label style="color:white">Board size </label>
+        <input id="sizer" type="number" value="16" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"/>
+        <br>
+        <button id="boardSizeButton" onclick = "redoBoard(document.querySelector('#sizer').value)">Resize Board</button>
     </div>
+    <script src="functions.js"></script>
+    <script src="index.js"></script>
+    <script src="snaker.js"></script>
     <script>
         updateDifficulty()
     </script>
